@@ -480,7 +480,7 @@ function SupportSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         <SectionHeading badge={s.nav.support} title={t.title} subtitle={t.packagesTitle} badgeColor="purple" />
 
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
           {t.packages.map((pkg, i) => (
             <motion.div
               key={i}

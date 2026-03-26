@@ -252,7 +252,7 @@ export const copy: Record<
         packages: [
           {
             name: "Package 1: Launch Fix Support",
-            durationPlaceholder: "Duration: [e.g., 14 days]",
+            durationPlaceholder: "Duration: 14 days",
             details: [
               "Bug fixes related to the delivered pages and CMS/API integration.",
               "Small CSS/spacing adjustments if required after initial client review.",
@@ -260,7 +260,7 @@ export const copy: Record<
           },
           {
             name: "Package 2: CMS Training",
-            durationPlaceholder: "Duration: [e.g., 1–2 sessions]",
+            durationPlaceholder: "Duration: 2 sessions",
             details: [
               "Training for how to edit: Pages, Services, Divisions, Partners, Team, Testimonials, and Media.",
               "Hand-over checklist and admin usage guide.",
@@ -268,7 +268,7 @@ export const copy: Record<
           },
           {
             name: "Package 3: Optional Maintenance",
-            durationPlaceholder: "Duration: [e.g., 3 months]",
+            durationPlaceholder: "Duration: 3 months",
             details: [
               "Updates and improvements for new sections or minor changes requested by AIMS.",
               "Security dependency updates when needed (based on client policy).",
@@ -436,7 +436,7 @@ export const copy: Record<
         packages: [
           {
             name: "باكيدج 1: دعم إصلاحات الإطلاق",
-            durationPlaceholder: "المدة: 1",
+            durationPlaceholder: "المدة: 14 يوم",
             details: [
               "إصلاح الأخطاء المتعلقة بالصفحات والتكامل مع CMS/API.",
               "تعديلات بسيطة في المسافات/الـ CSS عند مراجعة أولية من العميل.",
@@ -444,7 +444,7 @@ export const copy: Record<
           },
           {
             name: "باكيدج 2: تدريب CMS",
-            durationPlaceholder: "المدة: 1",
+            durationPlaceholder: "المدة: جلستان",
             details: [
               "شرح كيفية تعديل: الصفحات، الخدمات، الأقسام، الشركاء، الفريق، الشهادات، والوسائط.",
               "قائمة تسليم + دليل استخدام لوحة الإدارة.",
@@ -452,7 +452,7 @@ export const copy: Record<
           },
           {
             name: "باكيدج 3: صيانة اختيارية",
-            durationPlaceholder: "المدة: 1",
+            durationPlaceholder: "المدة: 3 أشهر",
             details: [
               "تحديثات وتحسينات للأقسام الجديدة أو تعديلات طفيفة حسب طلب AIMS.",
               "تحديثات تبعيات/اعتمادات بشكل آمن عند الحاجة (حسب سياسة العميل).",
