@@ -7,6 +7,7 @@ export const navSectionIds = {
   options: "options",
   decision: "decision",
   timeline: "timeline",
+  pricing: "pricing",
   support: "support",
   nextSteps: "next-steps",
 } as const;
@@ -27,6 +28,7 @@ export const copy: Record<
       | "options"
       | "decision"
       | "timeline"
+      | "pricing"
       | "support"
       | "nextSteps",
       string
@@ -92,6 +94,17 @@ export const copy: Record<
         milestonesTitle: string;
         milestones: string[];
       };
+      pricing: {
+        title: string;
+        subtitle: string;
+        note: string;
+        columns: {
+          label: string;
+          optionA: string;
+          optionB: string;
+          optionC: string;
+        }[];
+      };
       support: {
         title: string;
         packagesTitle: string;
@@ -125,6 +138,7 @@ export const copy: Record<
       options: "Implementation Options",
       decision: "CMS vs APIs Decision",
       timeline: "Timeline & Assumptions",
+      pricing: "Pricing",
       support: "Support Packages",
       nextSteps: "Client Inputs & Next Steps",
     },
@@ -179,7 +193,7 @@ export const copy: Record<
           "All options include the same redesigned UI (landing + pages) and bilingual/RTL delivery. The difference is how content editing is implemented.",
         optionA: {
           title: "Option A (Recommended baseline): CMS-ready frontend",
-          timeline: "~35–40 days",
+          timeline: "~18–20 days",
           includes: [
             "Next.js/React frontend with the new layout for all pages.",
             "Integration-ready data model (frontend consumes CMS-like API shape).",
@@ -190,7 +204,7 @@ export const copy: Record<
         },
         optionB: {
           title: "Option B: Frontend + Strapi CMS (self-hosted)",
-          timeline: "~50–60 days",
+          timeline: "~25–30 days",
           includes: [
             "Option A deliverables.",
             "Strapi setup: content types, media library, roles/permissions, and admin UI.",
@@ -202,7 +216,7 @@ export const copy: Record<
         },
         optionC: {
           title: "Option C: Frontend + Custom APIs + Admin UI",
-          timeline: "~85–100 days",
+          timeline: "~43–50 days",
           includes: [
             "Option A deliverables.",
             "Custom backend APIs (CRUD + media upload) and an admin dashboard UI.",
@@ -233,7 +247,7 @@ export const copy: Record<
       timeline: {
         title: "Timeline, assumptions, and your workload",
         assumptions: [
-          "Estimated timeline assumes your daily work is up to 2 hours/day on focused tasks.",
+          "Estimated timeline assumes 2 dedicated resources working up to 2 hours/day each on focused tasks.",
           "Timeline assumes the design is approved early and content structure is confirmed.",
           "If CMS/API is not ready (or content migration is required), add time for setup and migration.",
         ],
@@ -244,6 +258,17 @@ export const copy: Record<
           "Landing page + core templates implemented first, then reusable templates for services/divisions/partners.",
           "CMS (Strapi) or API integration, including media handling and content preview.",
           "QA: responsive checks, RTL checks, and “admin edit -> page render” validation.",
+        ],
+      },
+      pricing: {
+        title: "Pricing overview",
+        subtitle: "Pricing details will be shared upon agreement on scope and delivery option.",
+        note: "Prices below will be updated after the initial discussion.",
+        columns: [
+          { label: "Frontend development", optionA: "—", optionB: "—", optionC: "—" },
+          { label: "CMS setup & integration", optionA: "—", optionB: "—", optionC: "—" },
+          { label: "Hosting (annual)", optionA: "—", optionB: "—", optionC: "—" },
+          { label: "Support package", optionA: "—", optionB: "—", optionC: "—" },
         ],
       },
       support: {
@@ -309,6 +334,7 @@ export const copy: Record<
       options: "خيارات التنفيذ",
       decision: "قرار CMS مقابل APIs",
       timeline: "الجدول الزمني والافتراضات",
+      pricing: "التسعير",
       support: "باكجات الدعم",
       nextSteps: "مساهمات العميل والخطوات القادمة",
     },
@@ -363,7 +389,7 @@ export const copy: Record<
           "جميع الخيارات تتضمن نفس واجهة التصميم المُعاد (صفحة الهبوط + الصفحات) + ثنائية اللغة وRTL. الفرق الأساسي هو طريقة إدارة المحتوى.",
         optionA: {
           title: "الخيار A (مقترح كبداية): Frontend جاهز لـ CMS",
-          timeline: "~35–40 يوم",
+          timeline: "~18–20 يوم",
           includes: [
             "واجهة Next.js/React الجديدة لكل الصفحات.",
             "نموذج بيانات Frontend جاهز للتكامل مع CMS (شكل API مطابق لتوقعات الواجهة).",
@@ -374,7 +400,7 @@ export const copy: Record<
         },
         optionB: {
           title: "الخيار B: Frontend + CMS Strapi (استضافة ذاتية)",
-          timeline: "~50–60 يوم",
+          timeline: "~25–30 يوم",
           includes: [
             "كل ما في الخيار A.",
             "إعداد Strapi: أنواع المحتوى، مكتبة الوسائط، الصلاحيات، ولوحة الإدارة.",
@@ -386,7 +412,7 @@ export const copy: Record<
         },
         optionC: {
           title: "الخيار C: Frontend + APIs مخصصة + لوحة تحكم",
-          timeline: "~85–100 يوم",
+          timeline: "~43–50 يوم",
           includes: [
             "كل ما في الخيار A.",
             "Backend مخصص: APIs للـ CRUD + رفع الوسائط + لوحة تحكم Admin UI.",
@@ -417,7 +443,7 @@ export const copy: Record<
       timeline: {
         title: "الجدول الزمني والافتراضات الخاصة بالعمل",
         assumptions: [
-          "التقديرات تفترض عملك اليومي حتى ساعتين/يوم مع تركيز على المهام المطلوبة.",
+          "التقديرات تفترض وجود مطورَيْن (2 resources) يعمل كل منهما حتى ساعتين/يوم على المهام المطلوبة.",
           "نفرض موافقة مبكرة على التصميم وتأكيد هيكل المحتوى.",
           "إذا لم يكن الـ CMS/API جاهزاً (أو توجد هجرة محتوى)، فسنضيف وقتاً لإعداد وربط المحتوى.",
         ],
@@ -428,6 +454,17 @@ export const copy: Record<
           "تنفيذ Landing + القوالب الأساسية أولاً، ثم القوالب القابلة لإعادة الاستخدام للخدمات/الأقسام/الشركاء.",
           "ربط CMS (Strapi) أو APIs، مع التعامل مع الوسائط ومعاينة المحتوى.",
           "اختبارات QA: تحقق RTL والمتجاوبية والتحقق من “تعديل الإدمن -> ظهور على الصفحة”.",
+        ],
+      },
+      pricing: {
+        title: "نظرة على التسعير",
+        subtitle: "سيتم مشاركة تفاصيل الأسعار بعد الاتفاق على النطاق وخيار التسليم.",
+        note: "الأسعار أدناه سيتم تحديثها بعد المناقشة الأولية.",
+        columns: [
+          { label: "تطوير الواجهة (Frontend)", optionA: "—", optionB: "—", optionC: "—" },
+          { label: "إعداد وتكامل الـ CMS", optionA: "—", optionB: "—", optionC: "—" },
+          { label: "الاستضافة (سنوياً)", optionA: "—", optionB: "—", optionC: "—" },
+          { label: "باكيدج الدعم", optionA: "—", optionB: "—", optionC: "—" },
         ],
       },
       support: {

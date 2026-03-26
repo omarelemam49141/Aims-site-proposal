@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import {
   ArrowDown, Layers, Monitor, Server, Database, Clock, Calendar,
   CheckCircle2, XCircle, ChevronLeft, ChevronRight, Headphones, BookOpen,
-  Wrench, FileText, Palette, Code2, TestTube2, Rocket, Star, Zap
+  Wrench, FileText, Palette, Code2, TestTube2, Rocket, Star, Zap, DollarSign
 } from "lucide-react";
 
 import { LanguageProvider, useLanguage } from "@/components/language/language-provider";
@@ -371,20 +371,20 @@ function TimelineSection() {
 
   const milestones = lang === "ar"
     ? [
-        { icon: <Palette size={20} />, title: "نظام التصميم", days: "3-5", desc: "الألوان، الخطوط، هيكل الصفحة، RTL", color: "from-pink-500 to-rose-500" },
-        { icon: <Code2 size={20} />, title: "المكونات المشتركة", days: "3-4", desc: "الهيدر، الفوتر، الكروت، أنماط الحركات", color: "from-blue-500 to-cyan-500" },
-        { icon: <Rocket size={20} />, title: "Landing + القوالب الأساسية", days: "7-10", desc: "صفحة الهبوط + الصفحات الأساسية", color: "from-purple-500 to-violet-500" },
-        { icon: <Layers size={20} />, title: "القوالب المتكررة", days: "6-8", desc: "الخدمات، الأقسام، الشركاء", color: "from-emerald-500 to-green-500" },
-        { icon: <Server size={20} />, title: "ربط CMS / API", days: "6-10", desc: "تكامل البيانات ومعاينة المحتوى", color: "from-amber-500 to-orange-500" },
-        { icon: <TestTube2 size={20} />, title: "اختبارات QA", days: "3-5", desc: "RTL، المتجاوبية، تحقق الإدمن", color: "from-red-500 to-pink-500" },
+        { icon: <Palette size={20} />, title: "نظام التصميم", days: "2-3", desc: "الألوان، الخطوط، هيكل الصفحة، RTL", color: "from-pink-500 to-rose-500" },
+        { icon: <Code2 size={20} />, title: "المكونات المشتركة", days: "2", desc: "الهيدر، الفوتر، الكروت، أنماط الحركات", color: "from-blue-500 to-cyan-500" },
+        { icon: <Rocket size={20} />, title: "Landing + القوالب الأساسية", days: "4-5", desc: "صفحة الهبوط + الصفحات الأساسية", color: "from-purple-500 to-violet-500" },
+        { icon: <Layers size={20} />, title: "القوالب المتكررة", days: "3-4", desc: "الخدمات، الأقسام، الشركاء", color: "from-emerald-500 to-green-500" },
+        { icon: <Server size={20} />, title: "ربط CMS / API", days: "3-5", desc: "تكامل البيانات ومعاينة المحتوى", color: "from-amber-500 to-orange-500" },
+        { icon: <TestTube2 size={20} />, title: "اختبارات QA", days: "2-3", desc: "RTL، المتجاوبية، تحقق الإدمن", color: "from-red-500 to-pink-500" },
       ]
     : [
-        { icon: <Palette size={20} />, title: "Design System", days: "3-5", desc: "Colors, fonts, page structure, RTL", color: "from-pink-500 to-rose-500" },
-        { icon: <Code2 size={20} />, title: "Shared Components", days: "3-4", desc: "Header, footer, cards, animation patterns", color: "from-blue-500 to-cyan-500" },
-        { icon: <Rocket size={20} />, title: "Landing + Core Templates", days: "7-10", desc: "Home page + core unique pages", color: "from-purple-500 to-violet-500" },
-        { icon: <Layers size={20} />, title: "Reusable Templates", days: "6-8", desc: "Services, divisions, partners", color: "from-emerald-500 to-green-500" },
-        { icon: <Server size={20} />, title: "CMS / API Integration", days: "6-10", desc: "Data wiring and content preview", color: "from-amber-500 to-orange-500" },
-        { icon: <TestTube2 size={20} />, title: "QA & Testing", days: "3-5", desc: "RTL, responsive, admin flow", color: "from-red-500 to-pink-500" },
+        { icon: <Palette size={20} />, title: "Design System", days: "2-3", desc: "Colors, fonts, page structure, RTL", color: "from-pink-500 to-rose-500" },
+        { icon: <Code2 size={20} />, title: "Shared Components", days: "2", desc: "Header, footer, cards, animation patterns", color: "from-blue-500 to-cyan-500" },
+        { icon: <Rocket size={20} />, title: "Landing + Core Templates", days: "4-5", desc: "Home page + core unique pages", color: "from-purple-500 to-violet-500" },
+        { icon: <Layers size={20} />, title: "Reusable Templates", days: "3-4", desc: "Services, divisions, partners", color: "from-emerald-500 to-green-500" },
+        { icon: <Server size={20} />, title: "CMS / API Integration", days: "3-5", desc: "Data wiring and content preview", color: "from-amber-500 to-orange-500" },
+        { icon: <TestTube2 size={20} />, title: "QA & Testing", days: "2-3", desc: "RTL, responsive, admin flow", color: "from-red-500 to-pink-500" },
       ];
 
   return (
@@ -459,6 +459,73 @@ function TimelineSection() {
             );
           })}
         </div>
+      </div>
+    </section>
+  );
+}
+
+/* ─────────────── PRICING ─────────────── */
+function PricingSection() {
+  const { lang } = useLanguage();
+  const t = copy[lang].sections.pricing;
+  const s = copy[lang];
+
+  const optionHeaders = [
+    { key: "A", color: "text-blue-700", bg: "bg-blue-50" },
+    { key: "B", color: "text-purple-700", bg: "bg-purple-50" },
+    { key: "C", color: "text-amber-700", bg: "bg-amber-50" },
+  ];
+
+  return (
+    <section id={navSectionIds.pricing} className="scroll-mt-24 py-20 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
+      <div className="absolute top-0 left-1/3 w-[500px] h-[500px] bg-emerald-100/20 rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+        <SectionHeading badge={s.nav.pricing} title={t.title} subtitle={t.subtitle} badgeColor="green" />
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          className="bg-white rounded-3xl border border-slate-200 shadow-xl overflow-hidden max-w-5xl mx-auto"
+        >
+          <div className="grid grid-cols-4 text-center font-bold text-sm border-b border-slate-100">
+            <div className="p-4 text-slate-500 flex items-center justify-center gap-2">
+              <DollarSign size={16} />
+              {lang === "ar" ? "البند" : "Item"}
+            </div>
+            {optionHeaders.map((h) => (
+              <div key={h.key} className={cn("p-4 border-s border-slate-100 font-extrabold", h.color, h.bg)}>
+                {lang === "ar" ? `الخيار ${h.key}` : `Option ${h.key}`}
+              </div>
+            ))}
+          </div>
+
+          {t.columns.map((row, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, x: lang === "ar" ? 20 : -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.08 }}
+              className={cn("grid grid-cols-4 text-center text-sm border-b border-slate-50", i % 2 === 0 ? "bg-slate-50/50" : "")}
+            >
+              <div className="p-4 font-semibold text-slate-700 text-start px-6">{row.label}</div>
+              <div className="p-4 border-s border-slate-100 text-slate-400 font-medium">{row.optionA}</div>
+              <div className="p-4 border-s border-slate-100 text-slate-400 font-medium">{row.optionB}</div>
+              <div className="p-4 border-s border-slate-100 text-slate-400 font-medium">{row.optionC}</div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mt-8 bg-gradient-to-r from-emerald-50 to-blue-50 border border-emerald-200/50 rounded-2xl p-6 text-center max-w-5xl mx-auto"
+        >
+          <p className="text-slate-600 font-medium text-[15px] leading-relaxed">{t.note}</p>
+        </motion.div>
       </div>
     </section>
   );
@@ -556,6 +623,7 @@ function ProposalContent() {
         <OptionsSection />
         <DecisionSection />
         <TimelineSection />
+        <PricingSection />
         <SupportSection />
       </main>
       <FooterSection />

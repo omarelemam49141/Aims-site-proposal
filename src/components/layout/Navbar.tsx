@@ -20,6 +20,7 @@ export function Navbar() {
     { id: navSectionIds.options, label: t.nav.options },
     { id: navSectionIds.decision, label: t.nav.decision },
     { id: navSectionIds.timeline, label: t.nav.timeline },
+    { id: navSectionIds.pricing, label: t.nav.pricing },
     { id: navSectionIds.support, label: t.nav.support },
   ];
 
