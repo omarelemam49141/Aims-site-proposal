@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import {
   ArrowDown, Layers, Monitor, Server, Database, Clock, Calendar,
   CheckCircle2, XCircle, ChevronLeft, ChevronRight, Headphones, BookOpen,
-  Wrench, FileText, Palette, Code2, TestTube2, Rocket, Star, Zap, DollarSign
+  Wrench, FileText, Palette, Code2, TestTube2, Rocket, Star, Zap, DollarSign, Github
 } from "lucide-react";
 
 import { LanguageProvider, useLanguage } from "@/components/language/language-provider";
@@ -532,6 +532,40 @@ function PricingSection() {
 }
 
 /* ─────────────── SUPPORT PACKAGES ─────────────── */
+function SourceCodeSection() {
+  const { lang } = useLanguage();
+  const t = copy[lang].sections.sourceCode;
+  const s = copy[lang];
+
+  return (
+    <section id={navSectionIds.sourceCode} className="scroll-mt-24 py-20 relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-[420px] h-[420px] bg-slate-200/30 rounded-full blur-[120px] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+        <SectionHeading badge={s.nav.sourceCode} title={t.title} subtitle={t.subtitle} badgeColor="blue" />
+
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          className="max-w-3xl mx-auto bg-white/90 backdrop-blur-sm border border-slate-200 rounded-3xl p-8 text-center shadow-xl"
+        >
+          <a
+            href="https://github.com/omarelemam49141/Aims-site-proposal"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-3 px-7 py-4 rounded-2xl bg-gradient-to-r from-slate-800 to-slate-900 text-white font-bold shadow-lg hover:shadow-xl transition-all"
+          >
+            <Github size={20} />
+            {t.buttonLabel}
+          </a>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+/* ─────────────── SUPPORT PACKAGES ─────────────── */
 function SupportSection() {
   const { lang } = useLanguage();
   const t = copy[lang].sections.support;
@@ -624,6 +658,7 @@ function ProposalContent() {
         <DecisionSection />
         <TimelineSection />
         <PricingSection />
+        <SourceCodeSection />
         <SupportSection />
       </main>
       <FooterSection />

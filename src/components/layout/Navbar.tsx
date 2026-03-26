@@ -21,6 +21,7 @@ export function Navbar() {
     { id: navSectionIds.decision, label: t.nav.decision },
     { id: navSectionIds.timeline, label: t.nav.timeline },
     { id: navSectionIds.pricing, label: t.nav.pricing },
+    { id: navSectionIds.sourceCode, label: t.nav.sourceCode },
     { id: navSectionIds.support, label: t.nav.support },
   ];
 

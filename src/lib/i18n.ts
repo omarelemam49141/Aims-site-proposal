@@ -8,6 +8,7 @@ export const navSectionIds = {
   decision: "decision",
   timeline: "timeline",
   pricing: "pricing",
+  sourceCode: "source-code",
   support: "support",
   nextSteps: "next-steps",
 } as const;
@@ -29,6 +30,7 @@ export const copy: Record<
       | "decision"
       | "timeline"
       | "pricing"
+      | "sourceCode"
       | "support"
       | "nextSteps",
       string
@@ -105,6 +107,11 @@ export const copy: Record<
           optionC: string;
         }[];
       };
+      sourceCode: {
+        title: string;
+        subtitle: string;
+        buttonLabel: string;
+      };
       support: {
         title: string;
         packagesTitle: string;
@@ -139,6 +146,7 @@ export const copy: Record<
       decision: "CMS vs APIs Decision",
       timeline: "Timeline & Assumptions",
       pricing: "Pricing",
+      sourceCode: "Source Code",
       support: "Support Packages",
       nextSteps: "Client Inputs & Next Steps",
     },
@@ -271,6 +279,12 @@ export const copy: Record<
           { label: "Support package", optionA: "—", optionB: "—", optionC: "—" },
         ],
       },
+      sourceCode: {
+        title: "Source code",
+        subtitle:
+          "The project repository includes the full proposal website source code and deployment workflow.",
+        buttonLabel: "Open Repository",
+      },
       support: {
         title: "Launch support packages",
         packagesTitle: "Support is included to reduce risk after go-live.",
@@ -335,6 +349,7 @@ export const copy: Record<
       decision: "قرار CMS مقابل APIs",
       timeline: "الجدول الزمني والافتراضات",
       pricing: "التسعير",
+      sourceCode: "السورس كود",
       support: "باكجات الدعم",
       nextSteps: "مساهمات العميل والخطوات القادمة",
     },
@@ -466,6 +481,12 @@ export const copy: Record<
           { label: "الاستضافة (سنوياً)", optionA: "—", optionB: "—", optionC: "—" },
           { label: "باكيدج الدعم", optionA: "—", optionB: "—", optionC: "—" },
         ],
+      },
+      sourceCode: {
+        title: "السورس كود",
+        subtitle:
+          "مستودع المشروع يحتوي على السورس كود الكامل لموقع المقترح بالإضافة إلى إعدادات النشر.",
+        buttonLabel: "فتح المستودع",
       },
       support: {
         title: "باكجات دعم ما بعد الإطلاق",
