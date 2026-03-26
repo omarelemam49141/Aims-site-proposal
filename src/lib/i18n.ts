@@ -110,7 +110,7 @@ export const copy: Record<
       sourceCode: {
         title: string;
         subtitle: string;
-        buttonLabel: string;
+        bullets: string[];
       };
       support: {
         title: string;
@@ -146,7 +146,7 @@ export const copy: Record<
       decision: "CMS vs APIs Decision",
       timeline: "Timeline & Assumptions",
       pricing: "Pricing",
-      sourceCode: "Source Code",
+      sourceCode: "Source Code Buyout",
       support: "Support Packages",
       nextSteps: "Client Inputs & Next Steps",
     },
@@ -280,10 +280,14 @@ export const copy: Record<
         ],
       },
       sourceCode: {
-        title: "Source code",
+        title: "Source code buyout (optional)",
         subtitle:
-          "The project repository includes the full proposal website source code and deployment workflow.",
-        buttonLabel: "Open Repository",
+          "If you need full ownership of the source code, it can be delivered as a separate item.",
+        bullets: [
+          "Deliverable: full frontend source code, project files, and build/deployment instructions.",
+          "Handover: repository access can be transferred to the client organization.",
+          "Pricing: to be provided after confirming scope and the selected option (A/B/C).",
+        ],
       },
       support: {
         title: "Launch support packages",
@@ -349,7 +353,7 @@ export const copy: Record<
       decision: "قرار CMS مقابل APIs",
       timeline: "الجدول الزمني والافتراضات",
       pricing: "التسعير",
-      sourceCode: "السورس كود",
+      sourceCode: "شراء السورس كود",
       support: "باكجات الدعم",
       nextSteps: "مساهمات العميل والخطوات القادمة",
     },
@@ -483,10 +487,14 @@ export const copy: Record<
         ],
       },
       sourceCode: {
-        title: "السورس كود",
+        title: "شراء السورس كود (اختياري)",
         subtitle:
-          "مستودع المشروع يحتوي على السورس كود الكامل لموقع المقترح بالإضافة إلى إعدادات النشر.",
-        buttonLabel: "فتح المستودع",
+          "إذا احتجتم تملّك السورس كود بالكامل، يمكن تسليمه كعنصر منفصل عند الطلب.",
+        bullets: [
+          "التسليم: السورس كود الكامل للواجهة + ملفات المشروع + تعليمات البناء والنشر.",
+          "التسليم الرسمي: نقل المستودع/الصلاحيات إلى جهة العميل بعد الإطلاق.",
+          "التسعير: يتم تحديده بعد تأكيد نطاق العمل والخيار المختار (A/B/C).",
+        ],
       },
       support: {
         title: "باكجات دعم ما بعد الإطلاق",

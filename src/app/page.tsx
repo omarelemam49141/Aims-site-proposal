@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import {
   ArrowDown, Layers, Monitor, Server, Database, Clock, Calendar,
   CheckCircle2, XCircle, ChevronLeft, ChevronRight, Headphones, BookOpen,
-  Wrench, FileText, Palette, Code2, TestTube2, Rocket, Star, Zap, DollarSign, Github
+  Wrench, FileText, Palette, Code2, TestTube2, Rocket, Star, Zap, DollarSign
 } from "lucide-react";
 
 import { LanguageProvider, useLanguage } from "@/components/language/language-provider";
@@ -548,17 +548,18 @@ function SourceCodeSection() {
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
-          className="max-w-3xl mx-auto bg-white/90 backdrop-blur-sm border border-slate-200 rounded-3xl p-8 text-center shadow-xl"
+          className="max-w-4xl mx-auto bg-white/90 backdrop-blur-sm border border-slate-200 rounded-3xl p-8 shadow-xl"
         >
-          <a
-            href="https://github.com/omarelemam49141/Aims-site-proposal"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-3 px-7 py-4 rounded-2xl bg-gradient-to-r from-slate-800 to-slate-900 text-white font-bold shadow-lg hover:shadow-xl transition-all"
-          >
-            <Github size={20} />
-            {t.buttonLabel}
-          </a>
+          <div className="grid md:grid-cols-3 gap-4">
+            {t.bullets.map((b, i) => (
+              <div key={i} className="bg-slate-50 border border-slate-200/70 rounded-2xl p-5">
+                <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 text-white flex items-center justify-center font-black mb-3">
+                  {i + 1}
+                </div>
+                <p className="text-slate-700 font-semibold leading-relaxed">{b}</p>
+              </div>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>
