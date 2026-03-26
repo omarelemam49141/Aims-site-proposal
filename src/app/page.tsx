@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  ArrowDown, Layers, Monitor, Server, Database, Shield, Clock, Calendar,
+  ArrowDown, Layers, Monitor, Server, Database, Clock, Calendar,
   CheckCircle2, XCircle, ChevronLeft, ChevronRight, Headphones, BookOpen,
   Wrench, FileText, Palette, Code2, TestTube2, Rocket, Star, Zap
 } from "lucide-react";
@@ -520,84 +520,6 @@ function SupportSection() {
   );
 }
 
-/* ─────────────── NEXT STEPS ─────────────── */
-function NextStepsSection() {
-  const { lang } = useLanguage();
-  const t = copy[lang].sections.nextSteps;
-  const s = copy[lang];
-
-  return (
-    <section id={navSectionIds.nextSteps} className="scroll-mt-24 py-20 relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-blue-100/20 rounded-full blur-[100px] pointer-events-none" />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-        <SectionHeading badge={s.nav.nextSteps} title={t.title} badgeColor="amber" />
-
-        <div className="grid lg:grid-cols-2 gap-6 max-w-5xl mx-auto">
-          <GlassCard delay={0.1} className="!p-7">
-            <div className="flex items-center gap-3 mb-5">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white shadow-md">
-                <FileText size={20} />
-              </div>
-              <h3 className="text-xl font-extrabold text-slate-900">{t.detailsTitle}</h3>
-            </div>
-            <ul className="space-y-3">
-              {t.details.map((d, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <div className="mt-1 w-5 h-5 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center shrink-0">
-                    <CheckCircle2 size={12} strokeWidth={3} />
-                  </div>
-                  <span className="text-slate-700 text-[15px] leading-relaxed">{d}</span>
-                </li>
-              ))}
-            </ul>
-          </GlassCard>
-
-          <GlassCard delay={0.2} className="!p-7">
-            <div className="flex items-center gap-3 mb-5">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center text-white shadow-md">
-                <Shield size={20} />
-              </div>
-              <h3 className="text-xl font-extrabold text-slate-900">{t.cmsReadinessTitle}</h3>
-            </div>
-            <ul className="space-y-3 mb-6">
-              {t.cmsReadiness.map((d, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <div className="mt-1 w-5 h-5 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center shrink-0">
-                    <CheckCircle2 size={12} strokeWidth={3} />
-                  </div>
-                  <span className="text-slate-700 text-[15px] leading-relaxed">{d}</span>
-                </li>
-              ))}
-            </ul>
-
-            <div className="bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200/50 rounded-xl p-4">
-              <p className="text-sm font-semibold text-slate-700 leading-relaxed">{t.decisionPrompt}</p>
-            </div>
-          </GlassCard>
-        </div>
-
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mt-14 text-center"
-        >
-          <motion.button
-            whileHover={{ scale: 1.04 }}
-            whileTap={{ scale: 0.98 }}
-            onClick={() => scrollTo(navSectionIds.executiveSummary)}
-            className="px-8 py-4 text-lg font-bold bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-2xl shadow-xl shadow-blue-500/25 hover:shadow-2xl transition-shadow"
-          >
-            {lang === "ar" ? "العودة للأعلى" : "Back to Top"}
-          </motion.button>
-        </motion.div>
-      </div>
-    </section>
-  );
-}
-
 /* ─────────────── FOOTER ─────────────── */
 function FooterSection() {
   const { lang } = useLanguage();
@@ -635,7 +557,6 @@ function ProposalContent() {
         <DecisionSection />
         <TimelineSection />
         <SupportSection />
-        <NextStepsSection />
       </main>
       <FooterSection />
     </div>

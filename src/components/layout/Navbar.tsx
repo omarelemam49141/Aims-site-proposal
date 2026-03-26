@@ -21,7 +21,6 @@ export function Navbar() {
     { id: navSectionIds.decision, label: t.nav.decision },
     { id: navSectionIds.timeline, label: t.nav.timeline },
     { id: navSectionIds.support, label: t.nav.support },
-    { id: navSectionIds.nextSteps, label: t.nav.nextSteps },
   ];
 
   useEffect(() => {
