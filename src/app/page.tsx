@@ -225,7 +225,7 @@ function OptionsSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
         <SectionHeading badge={s.nav.options} title={t.title} subtitle={t.description} badgeColor="blue" />
 
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
           {options.map((opt, i) => {
             const cs = colorStyles[opt.color];
             return (
